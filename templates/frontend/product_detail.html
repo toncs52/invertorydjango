@@ -1,0 +1,31 @@
+{% extends 'frontend/layout.html' %}
+
+{% block title %} Product Detail {% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      
+        <div class="col-md-4">
+            <div class="card">
+                <a href="#"> <img src="{{ products.product_image }}" class="img-fluid" alt=""/></a>
+                
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <p>{{ products.product_price }}</p>
+            <p>{{ products.product_name }}</p>
+            <p>{{ products.product_price }}</p>
+            <p>{{ products.product_barcode }}</p>
+            <div class="card-text">
+                {{ products.product_detail | truncatewords:30 }}
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+
